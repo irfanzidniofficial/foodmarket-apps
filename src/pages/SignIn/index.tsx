@@ -1,8 +1,12 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {Button, Gap, Header, TextInput} from '../../components';
+import {useNavigation} from '@react-navigation/native';
+import {StackParamList} from '../../router';
+import {StackNavigationProp} from '@react-navigation/stack';
 
 const SignIn = () => {
+  const navigation = useNavigation<StackNavigationProp<StackParamList>>();
   return (
     <View style={styles.page}>
       <Header title="Sign In" subtitle="Find your best ever meal" />
@@ -16,7 +20,12 @@ const SignIn = () => {
         <Gap height={24} />
         <Button text="Sign In" color="#FFC700" />
         <Gap height={12} />
-        <Button text="Create New Account" color="#8D92A3" textColor="white" />
+        <Button
+          text="Create New Account"
+          color="#8D92A3"
+          textColor="white"
+          onPress={() => navigation.navigate('SignUp')}
+        />
       </View>
     </View>
   );

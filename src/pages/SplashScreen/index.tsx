@@ -4,7 +4,7 @@ import {Logo} from '../../assets';
 import {StackNavigationProp} from '@react-navigation/stack';
 
 type SplashScreenProps = {
-  navigation: StackNavigationProp<any>; // Sesuaikan tipe StackNavigationProp dengan tipe navigasi Anda
+  navigation: StackNavigationProp<any>;
 };
 
 const SplashScreen: React.FC<SplashScreenProps> = ({navigation}) => {
